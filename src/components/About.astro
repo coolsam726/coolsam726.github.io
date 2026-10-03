@@ -5,22 +5,36 @@ import { site } from '../data/site';
 <section id="about" class="bg-parchment-dim px-6 py-24 md:px-8 md:py-32">
   <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-[1.1fr_0.9fr] md:gap-20">
     <div class="reveal">
-      <p class="text-sm font-semibold uppercase tracking-[0.18em] text-copper">About</p>
+      <p class="text-sm font-semibold uppercase tracking-[0.18em] text-accent">About</p>
       <h2 class="font-display mt-3 text-4xl tracking-tight text-ink md:text-5xl">
         Builder first, consultant when it counts
       </h2>
       <p class="mt-6 text-lg leading-relaxed text-ink-muted">
         I run <span class="text-ink font-medium">SavannaBits</span> and contribute engineering at
         <span class="text-ink font-medium"> Strathmore University</span>. Most days that means
-        designing frameworks and plugins; some days it means embedding with a team to ship the hard parts.
+        designing frameworks and plugins; some days it means shipping end-user software solutions
+        with a team.
       </p>
       <p class="mt-4 text-lg leading-relaxed text-ink-muted">
         Based in {site.location}. Comfortable across the stack — from PHP and TypeScript services to
-        Kotlin IDE plugins and Python ERP modules.
+        Kotlin IDE plugins and Python frameworks.
       </p>
     </div>
 
     <aside class="reveal space-y-10 md:pt-12">
+      <div class="flex items-center gap-4">
+        <img
+          src={site.avatar}
+          alt=""
+          width="72"
+          height="72"
+          class="h-16 w-16 rounded-full border-2 border-honey object-cover"
+        />
+        <div>
+          <p class="font-display text-xl text-ink">{site.name}</p>
+          <p class="text-sm text-ink-muted">@{site.handle}</p>
+        </div>
+      </div>
       <div>
         <h3 class="text-sm font-semibold uppercase tracking-[0.16em] text-clay">Languages</h3>
         <ul class="mt-4 flex flex-wrap gap-x-3 gap-y-2 text-base text-ink">

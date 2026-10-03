@@ -1,16 +1,46 @@
 ---
 import { site } from '../data/site';
 const year = new Date().getFullYear();
+
+const socials = [
+  { label: 'X', href: site.links.twitter },
+  { label: 'Discord', href: site.links.discord },
+  { label: 'Facebook', href: site.links.facebook },
+  { label: 'GitHub', href: site.links.github },
+];
 ---
 
 <footer class="bg-ink px-6 py-10 text-mist/70 md:px-8">
-  <div class="mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-    <p class="font-display text-parchment/90">{site.name}</p>
+  <div class="mx-auto flex max-w-6xl flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+    <div class="flex items-center gap-3">
+      <img
+        src={site.avatar}
+        alt=""
+        width="40"
+        height="40"
+        class="h-10 w-10 rounded-full border border-honey/40 object-cover"
+      />
+      <p class="font-display text-parchment/90">{site.name}</p>
+    </div>
+    <ul class="flex flex-wrap gap-5 text-sm font-semibold">
+      {
+        socials.map((item) => (
+          <li>
+            <a
+              class="link-accent text-mist hover:text-honey"
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
     <p class="text-sm">
-      © {year} · Built with Astro ·
-      <a class="link-copper text-mist" href={site.links.github} target="_blank" rel="noopener noreferrer">
-        @{site.handle}
-      </a>
+      © {year} ·
+      <a class="link-accent text-mist" href={site.links.email}>devmaosa@gmail.com</a>
     </p>
   </div>
 </footer>

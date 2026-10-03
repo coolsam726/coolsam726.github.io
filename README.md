@@ -26,7 +26,9 @@ pnpm preview
 
 ## Edit content
 
-Project copy and links live in [`src/data/site.ts`](src/data/site.ts). Update ecosystems, open-source entries, or contact links there — no CMS required.
+Project copy and links live in [`src/data/site.ts`](src/data/site.ts). Update ecosystems, open-source entries, socials, sponsors, or contact links there — no CMS required.
+
+Theme tokens use Filament honey (`--filament-honey: #efaf5d`) as primary and `#286291` as accent in [`src/styles/global.css`](src/styles/global.css).
 
 ## Deploy
 
