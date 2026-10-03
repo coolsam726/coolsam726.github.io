@@ -3,61 +3,39 @@ import Header from './Header.astro';
 import { site } from '../data/site';
 ---
 
-<section id="top" class="relative isolate min-h-dvh overflow-hidden text-parchment">
-  <div class="topo grain absolute inset-0 -z-10" aria-hidden="true"></div>
-
+<section id="top" class="relative isolate min-h-dvh overflow-hidden text-white">
+  <div class="hero-plane absolute inset-0 -z-10" aria-hidden="true"></div>
   <Header />
 
-  <div
-    class="mx-auto grid min-h-dvh max-w-6xl items-end gap-10 px-6 pb-16 pt-28 md:grid-cols-[1.15fr_0.85fr] md:items-center md:gap-12 md:px-8 md:pb-24 md:pt-20"
-  >
-    <div>
-      <p class="animate-rise text-sm font-medium uppercase tracking-[0.22em] text-honey/90">
-        Kenya · SavannaBits · Open source
-      </p>
+  <div class="shell flex min-h-dvh flex-col justify-center py-28">
+    <div class="max-w-3xl">
+      <img
+        src={site.avatar}
+        alt={`${site.name} profile photo`}
+        width="96"
+        height="96"
+        class="avatar-live h-20 w-20 rounded-full object-cover ring-[3px] ring-honey md:h-24 md:w-24"
+        fetchpriority="high"
+      />
 
       <h1
-        class="animate-rise animate-rise-delay-1 font-display mt-5 max-w-4xl text-[clamp(3.25rem,11vw,7rem)] leading-[0.92] tracking-[-0.03em] text-balance"
+        class="rise rise-1 font-display mt-8 text-[clamp(3.75rem,14vw,8rem)] leading-[0.9] tracking-[-0.04em]"
       >
         Sam Maosa
       </h1>
 
-      <p class="animate-rise animate-rise-delay-2 mt-6 max-w-xl text-xl text-parchment/90 md:text-2xl">
+      <p class="rise rise-2 mt-6 max-w-xl text-xl text-white/85 md:text-2xl">
         Ecosystem builder &amp; full-stack craftsman
       </p>
 
-      <p class="animate-rise animate-rise-delay-2 mt-4 max-w-lg text-base leading-relaxed text-mist/95 md:text-lg">
-        I ship frameworks, plugins, and end-user software — then help teams put them to work.
+      <p class="rise rise-3 mt-4 max-w-md text-base leading-relaxed text-mist md:text-lg">
+        Frameworks, plugins, and end-user software — built to ship.
       </p>
 
-      <div class="animate-rise animate-rise-delay-3 mt-10 flex flex-wrap gap-4">
-        <a class="btn-primary" href="#ecosystems">View work</a>
-        <a class="btn-ghost" href="#contact">Work with me</a>
+      <div class="rise rise-4 mt-10 flex flex-wrap gap-3">
+        <a class="btn btn-honey" href="#work">See the work</a>
+        <a class="btn btn-line" href="#contact">Hire me</a>
       </div>
     </div>
-
-    <div class="animate-rise animate-rise-delay-4 flex justify-start md:justify-end">
-      <div class="relative">
-        <div
-          class="absolute -inset-4 rounded-full bg-gradient-to-br from-honey/30 via-transparent to-accent/40 blur-2xl"
-          aria-hidden="true"
-        >
-        </div>
-        <img
-          src={site.avatar}
-          alt={`${site.name} profile photo`}
-          width="280"
-          height="280"
-          class="avatar-float relative h-44 w-44 rounded-full border-4 border-honey/80 object-cover md:h-64 md:w-64"
-          fetchpriority="high"
-        />
-      </div>
-    </div>
-  </div>
-
-  <div
-    class="pointer-events-none absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-parchment to-transparent"
-    aria-hidden="true"
-  >
   </div>
 </section>

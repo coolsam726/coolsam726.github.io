@@ -1,0 +1,67 @@
+---
+import { ecosystems, openSource } from '../data/site';
+
+const featured = openSource.slice(0, 4);
+---
+
+<section id="work" class="bg-canvas px-0 py-20 md:py-28">
+  <div class="shell">
+    <div class="reveal max-w-xl">
+      <p class="text-sm font-semibold text-accent">Work</p>
+      <h2 class="font-display mt-2 text-4xl tracking-tight text-ink md:text-5xl">
+        Things I build
+      </h2>
+    </div>
+
+    <div class="reveal mt-12">
+      {
+        ecosystems.map((item) => (
+          <a class="row-link group" href={item.href} target="_blank" rel="noopener noreferrer">
+            <div class="flex items-baseline justify-between gap-4">
+              <h3 class="row-title font-display text-2xl tracking-tight md:text-3xl">{item.name}</h3>
+              <span class="row-arrow shrink-0 text-lg text-ink-muted" aria-hidden="true">→</span>
+            </div>
+            <p class="text-sm text-accent">{item.tag}</p>
+            <p class="mt-1 max-w-2xl text-base leading-relaxed text-ink-muted">{item.summary}</p>
+          </a>
+        ))
+      }
+    </div>
+
+    <div class="reveal mt-20 max-w-xl">
+      <p class="text-sm font-semibold text-honey">Open source</p>
+      <h3 class="font-display mt-2 text-3xl tracking-tight text-ink md:text-4xl">
+        Selected repos
+      </h3>
+    </div>
+
+    <ul class="reveal mt-8">
+      {
+        featured.map((project) => (
+          <li>
+            <a
+              class="row-link"
+              href={project.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                <h4 class="row-title font-display text-xl tracking-tight md:text-2xl">{project.name}</h4>
+                <span class="text-sm tabular-nums text-ink-muted">
+                  {project.stars != null ? `★ ${project.stars}` : project.stack}
+                </span>
+              </div>
+              <p class="text-base text-ink-muted">{project.description}</p>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <p class="reveal mt-8">
+      <a class="ink-link text-sm font-semibold text-accent" href="https://github.com/coolsam726" target="_blank" rel="noopener noreferrer">
+        All repositories on GitHub →
+      </a>
+    </p>
+  </div>
+</section>
