@@ -1,0 +1,52 @@
+---
+import { site } from '../data/site';
+
+const contacts = [
+  { label: 'GitHub', href: site.links.github },
+  { label: 'X / Twitter', href: site.links.twitter },
+  { label: 'SavannaBits', href: site.links.blog },
+  { label: 'Email', href: site.links.email },
+];
+---
+
+<section id="contact" class="relative overflow-hidden bg-ink-soft px-6 py-24 text-parchment md:px-8 md:py-32">
+  <div
+    class="pointer-events-none absolute -right-24 top-0 h-72 w-72 rounded-full bg-copper/20 blur-3xl"
+    aria-hidden="true"
+  >
+  </div>
+
+  <div class="reveal relative mx-auto max-w-6xl">
+    <p class="text-sm font-semibold uppercase tracking-[0.18em] text-copper-bright">Work with me</p>
+    <h2 class="font-display mt-3 max-w-3xl text-4xl tracking-tight md:text-5xl">
+      Need a framework, plugin, or ERP module that ships?
+    </h2>
+    <p class="mt-5 max-w-xl text-lg leading-relaxed text-mist/90">
+      Open to consulting, collaboration, and maintainer partnerships. Tell me what you are building.
+    </p>
+
+    <div class="mt-10 flex flex-wrap gap-4">
+      <a class="btn-primary" href={site.links.email}>Email Sam</a>
+      <a class="btn-ghost" href={site.links.github} target="_blank" rel="noopener noreferrer">
+        GitHub profile
+      </a>
+    </div>
+
+    <ul class="mt-14 flex flex-wrap gap-x-8 gap-y-4 border-t border-parchment/15 pt-8 text-sm font-semibold">
+      {
+        contacts.map((item) => (
+          <li>
+            <a
+              class="link-copper text-parchment/90"
+              href={item.href}
+              target={item.href.startsWith('mailto:') ? undefined : '_blank'}
+              rel={item.href.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

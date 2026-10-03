@@ -1,0 +1,30 @@
+---
+const links = [
+  { href: '#ecosystems', label: 'Work' },
+  { href: '#open-source', label: 'Open source' },
+  { href: '#about', label: 'About' },
+  { href: '#contact', label: 'Contact' },
+];
+---
+
+<header class="absolute inset-x-0 top-0 z-20">
+  <nav
+    class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6 md:px-8"
+    aria-label="Primary"
+  >
+    <a href="#top" class="font-display text-lg tracking-tight text-parchment/90 transition hover:text-parchment">
+      SM
+    </a>
+    <ul class="flex items-center gap-5 text-sm text-parchment/75 md:gap-8">
+      {
+        links.map((link) => (
+          <li>
+            <a class="transition hover:text-parchment" href={link.href}>
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>

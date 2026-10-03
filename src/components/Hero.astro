@@ -1,0 +1,40 @@
+---
+import Header from './Header.astro';
+---
+
+<section id="top" class="relative isolate min-h-dvh overflow-hidden text-parchment">
+  <div class="topo grain absolute inset-0 -z-10" aria-hidden="true"></div>
+
+  <Header />
+
+  <div class="mx-auto flex min-h-dvh max-w-6xl flex-col justify-end px-6 pb-16 pt-28 md:justify-center md:px-8 md:pb-24 md:pt-20">
+    <p class="animate-rise text-sm font-medium uppercase tracking-[0.22em] text-mist/80">
+      Kenya · SavannaBits · Open source
+    </p>
+
+    <h1
+      class="animate-rise animate-rise-delay-1 font-display mt-5 max-w-4xl text-[clamp(3.5rem,12vw,7.5rem)] leading-[0.92] tracking-[-0.03em] text-balance"
+    >
+      Sam Maosa
+    </h1>
+
+    <p class="animate-rise animate-rise-delay-2 mt-6 max-w-xl text-xl text-parchment/85 md:text-2xl">
+      Ecosystem builder &amp; full-stack craftsman
+    </p>
+
+    <p class="animate-rise animate-rise-delay-2 mt-4 max-w-lg text-base leading-relaxed text-mist/90 md:text-lg">
+      I ship frameworks, IDE plugins, and ERP tooling — then help teams put them to work.
+    </p>
+
+    <div class="animate-rise animate-rise-delay-3 mt-10 flex flex-wrap gap-4">
+      <a class="btn-primary" href="#ecosystems">View work</a>
+      <a class="btn-ghost" href="#contact">Work with me</a>
+    </div>
+  </div>
+
+  <div
+    class="pointer-events-none absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-parchment to-transparent"
+    aria-hidden="true"
+  >
+  </div>
+</section>

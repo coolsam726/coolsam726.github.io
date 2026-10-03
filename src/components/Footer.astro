@@ -1,0 +1,16 @@
+---
+import { site } from '../data/site';
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-ink px-6 py-10 text-mist/70 md:px-8">
+  <div class="mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+    <p class="font-display text-parchment/90">{site.name}</p>
+    <p class="text-sm">
+      © {year} · Built with Astro ·
+      <a class="link-copper text-mist" href={site.links.github} target="_blank" rel="noopener noreferrer">
+        @{site.handle}
+      </a>
+    </p>
+  </div>
+</footer>
