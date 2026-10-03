@@ -18,7 +18,7 @@
     "astro": "^7.3.5",
     "tailwindcss": "^4.3.3"
   },
-  "allowScripts": {
-    "esbuild": true
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild", "sharp"]
   }
 }
